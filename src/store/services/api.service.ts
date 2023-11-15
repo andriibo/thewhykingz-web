@@ -1,7 +1,7 @@
 import axios from "axios";
 import {NewsStatusEnum} from "@/enums/NewsStatusEnum";
-import * as NewsDetails from "@/store/types/news-details.type";
-import * as News from "@/store/types/news.type";
+import type {News} from "@/store/types/news.type";
+import type {NewsDetails} from "@/store/types/news-details.type";
 
 export async function getNewsList(): Promise<News[]> {
     const response = await axios.get("/news");
