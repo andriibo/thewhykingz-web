@@ -44,7 +44,7 @@
 
 import {NewsStatusEnum} from "@/enums/NewsStatusEnum";
 import {changeStatus, getNewsById} from "@/store/services/api.service";
-import {NewsDetails} from "@/store/types/news-details.type";
+import type {NewsDetails} from "@/store/types/news-details.type";
 
 export default {
   data() {

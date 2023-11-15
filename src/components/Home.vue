@@ -42,7 +42,7 @@
 
 <script lang="ts">
 import {getNewsList} from "@/store/services/api.service";
-import {News} from "@/store/types/news.type";
+import type {News} from "@/store/types/news.type";
 
 export default {
   data() {
@@ -56,9 +56,7 @@ export default {
   methods: {
     async getNews(): Promise<News[]> {
       try {
-        const response = await getNewsList();
-
-        this.newsList = response;
+        this.newsList = await getNewsList();
       } catch (error) {
         this.$notify({type: 'error', text: error});
       }
