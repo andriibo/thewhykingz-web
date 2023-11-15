@@ -16,5 +16,5 @@ export async function changeStatus(newsId: number, status: NewsStatusEnum ): Pro
 export async function getNewsById(newsId: number): Promise<NewsDetails> {
     const response = await axios.get(`/news/${newsId}`);
 
-    return response.data
+    return response.data.data;
 }

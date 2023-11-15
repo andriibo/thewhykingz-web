@@ -58,8 +58,7 @@ export default {
   methods: {
     async getNewsDetails(): Promise<NewsDetails> {
       try {
-        const response = await getNewsById(this.$route.params.id);
-        this.news = response.data;
+        this.news = await getNewsById(this.$route.params.id);
       } catch (error) {
         this.$notify({type: 'error', text: error});
       }
